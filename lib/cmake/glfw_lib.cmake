@@ -1,0 +1,13 @@
+set(glfw_PREFIX "${CMAKE_SOURCE_DIR}/glfw")
+ExternalProject_Add( glfw
+  GIT_REPOSITORY https://gitee.com/huanghone/glfw.git
+  GIT_TAG 3.3.8
+  CMAKE_ARGS 
+    -DCMAKE_INSTALL_PREFIX=${glfw_PREFIX}
+    -DCMAKE_BUILD_TYPE=Release
+    -DBUILD_SHARED_LIBS=ON
+    -DGLFW_BUILD_DOCS=OFF
+    -DGLFW_BUILD_EXAMPLES=OFF
+    -DGLFW_BUILD_TESTS=OFF
+    -DGLFW_INSTALL=ON
+)
